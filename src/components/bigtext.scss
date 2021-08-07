@@ -1,0 +1,146 @@
+
+@import '../styles/variables.scss';
+
+@mixin beef(){
+	position: absolute;
+	right: .75em;
+	color: $yellow;
+}
+
+@mixin aft(){
+	position: absolute;
+	color: $yellow;
+}
+.box{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	z-index: 10;
+	transform: translate(-50%, -50%);
+}
+.image{
+	background-image: url("../images/safar-safarov-koOdUvfGr4c-unsplash.jpg");
+	background-size: 100%;
+	width: 50%;
+	height: 100%;
+	position: relative;
+	&::after{
+		content: '';
+		width: 100%;
+		height: inherit;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: linear-gradient(-90deg, $blue 10%, #00000000)
+	}
+}
+.blankboard{
+	width: 50%;
+	height: 100%;
+	background-color: $blue;
+}
+.letter{
+	color: $red;
+	font-weight: bolder;
+	position: relative;
+	font-size: 69px;
+	text-align: center;
+	width: max-content;
+	font-family: 'Rubik', sans-serif;
+	cursor: default;
+}
+.F-letter{
+	  position: relative;
+	&::after{
+		content: "RESH";
+		@include aft();
+	}
+  }
+  .O-letter{
+	  position: relative;
+	&::before{
+		content: "PR";
+		@include beef();
+	}
+	&::after{
+		content: "GRAMIST";
+		@include aft();
+	}
+  }
+.X-letter{
+	position:relative;
+	&::before{
+		content: "E";
+		@include beef();
+	}
+	&::after{
+		content: "TROVERT";
+		@include aft();
+	}
+}
+.N-letter{
+	  position: relative;
+	  &::before{
+		  content: "FRIE";
+		  @include beef();
+	  }
+	  &::after{
+		  content: "DLY";
+		  @include aft();
+	  }
+}
+.A-letter{
+	position: relative;
+	&::before{
+		content: "CRE";
+		@include beef();
+	}
+	&::after{
+		content: "TIVE";
+		@include aft();
+	}
+}
+.C-letter{
+	position: relative;
+	&::before{
+		content: "REA";
+		position: absolute;
+		right: .6em;
+		color: $yellow;
+	}
+	&::after{
+		content: "T";
+		@include aft();
+	}
+}
+.I-letter{
+	position: relative;
+	&::before{
+		content: "PASS";
+		position: absolute;
+		right: .35em;
+		color: $yellow;
+	}
+	&::after{
+		content: "ONATE";
+		@include aft();
+	}
+}
+.T-letter{
+	position: relative;
+	&::after{
+		content: "EALOVER";
+		@include aft();
+	}
+}
+.Y-letter{
+	position: relative;
+	&::after{
+		content: "OUNG";
+		@include aft();
+	}
+}
