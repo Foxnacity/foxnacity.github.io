@@ -12,7 +12,7 @@ function Layout({children, title, author }){
 	return(
 	<Container>
       <Head title={title}/>
-      <Header prop1='Home' prop2='Contact'/>
+      <Header prop1='Home' prop2='Contact' prop3='About'/>
       {children}
       <Footer author={author} />
     </Container>
